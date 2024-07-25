@@ -11,8 +11,16 @@ bool validN2 = double.TryParse(Console.ReadLine(), out operacion.N2);
 
 if (validN1 && validN2)
 {
-    operacion.Imprimir();
+    if ( operacion.N2 != 0)
+    {
+        operacion.Imprimir();
+    }
+    else
+    {
+        Console.WriteLine("El segundo número no puede ser 0."); 
+    }
 }
+
 else
 {
     Console.WriteLine("Uno de los valores, o los valores ingresados no tiene el formato correcto");
